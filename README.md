@@ -103,9 +103,9 @@ ghcr.io/open-webui/open-webui:main
 
 ## Managing the Container
 - Stop:
-  ```
-  docker stop open-webui
-  ```
+```
+docker stop open-webui
+```
 - Start:
 ```
 docker start open-webui
