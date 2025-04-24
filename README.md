@@ -126,3 +126,26 @@ ARM64 Devices (Raspberry Pi 4/5): Use the ARM-compatible image:
 ```
 ghcr.io/open-webui/open-webui:main-arm64
 ```
+## Updating Open WebUI
+```
+docker stop open-webui
+docker rm open-webui
+docker pull ghcr.io/open-webui/open-webui:main
+docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+```
+
+#### Finally :
+```
+docker start open-webui
+```
+- Go to:
+```http://localhost:8080```
+  - Or from another device:
+    ```http://<your_raspberry_pi_ip>:8080```
+
+
+# The End:
+
+So yeah, this setup creates a clean and user-friendly web UI for the Ollama AI model using Docker. You pull the latest image, connect it to your local Ollama server, and just like that — you’ve got a browser-based interface ready to use.
+
+The container runs in the background, keeps your data safe using a Docker volume, and is configured to restart automatically if your system reboots. It’s efficient, reliable, and easy to manage — making your AI interaction smoother and more accessible.
