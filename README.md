@@ -86,11 +86,11 @@ ghcr.io/open-webui/open-webui:main
 ```
 
 #### This command does the following:
-- --network=host: Uses host network for accessing Ollama.
-- -v open-webui:/app/backend/data: Stores data in a Docker volume.
-- --name open-webui: Names the container.
-- --restart always: Ensures it restarts if it crashes.
-- The image ghcr.io/open-webui/open-webui:main is for the web UI.
+- ```--network=host```: Uses host network for accessing Ollama.
+- ```-v open-webui```:/app/backend/data: Stores data in a Docker volume.
+- ```--name open-webui```: Names the container.
+- ```--restart always```: Ensures it restarts if it crashes.
+- The image ```ghcr.io/open-webui/open-webui:main``` is for the web UI.
 
 ## How to Use the Chatbot
 
